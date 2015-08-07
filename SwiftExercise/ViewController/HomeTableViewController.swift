@@ -10,7 +10,7 @@ import UIKit
 
 class HomeTableViewController: UITableViewController {
     
-    var list:NSArray = {["TableView显示图片", "相册显示"]}()
+    var list:NSArray = {["TableView显示图片", "调用系统相机"]}()
 
     override func viewDidLoad() {
         super.viewDidLoad()
