@@ -52,6 +52,17 @@ class HomeTableViewController: UITableViewController {
 
         return cell
     }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        switch indexPath.row {
+        case 0:
+            var newPageView: ImageTableViewController
+            = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ImageTableViewControllerID") as! ImageTableViewController
+            self.navigationController?.pushViewController(newPageView, animated: true)
+        default:
+            break
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.
