@@ -10,7 +10,7 @@ import UIKit
 
 class HomeTableViewController: UITableViewController {
     
-    var list:NSArray = {["TableView显示图片", "调用系统相机"]}()
+    var list:NSArray = {["TableView显示图片", "相机－相册"]}()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,9 +56,12 @@ class HomeTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         switch indexPath.row {
         case 0:
-            var newPageView: ImageTableViewController
+            var imageViewControllerJump: ImageTableViewController
             = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ImageTableViewControllerID") as! ImageTableViewController
-            self.navigationController?.pushViewController(newPageView, animated: true)
+            self.navigationController?.pushViewController(imageViewControllerJump, animated: true)
+        case 1:
+            var camSysViewControllerJump:CameraSysViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("CameraSysViewControllerID") as! CameraSysViewController
+            self.navigationController?.pushViewController(camSysViewControllerJump, animated: true)
         default:
             break
         }

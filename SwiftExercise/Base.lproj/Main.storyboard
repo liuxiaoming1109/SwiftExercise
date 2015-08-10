@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fAS-sW-1ct">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -53,10 +55,10 @@
             </objects>
             <point key="canvasLocation" x="1723" y="286"/>
         </scene>
-        <!--Image Table View Controller-->
+        <!--图片显示-->
         <scene sceneID="qh0-la-hLM">
             <objects>
-                <viewController storyboardIdentifier="ImageTableViewControllerID" id="5ud-gq-Q6T" customClass="ImageTableViewController" customModule="SwiftExercise" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ImageTableViewControllerID" title="图片显示" id="5ud-gq-Q6T" customClass="ImageTableViewController" customModule="SwiftExercise" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="T63-hx-UbR"/>
                         <viewControllerLayoutGuide type="bottom" id="5T4-rp-PCJ"/>
@@ -87,10 +89,112 @@
             </objects>
             <point key="canvasLocation" x="2429" y="-1353"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--系统相机-->
+        <scene sceneID="2do-gL-KD6">
+            <objects>
+                <viewController storyboardIdentifier="CameraSysViewControllerID" title="系统相机" id="Ehl-Ib-k0L" customClass="CameraSysViewController" customModule="SwiftExercise" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rXb-57-4L7"/>
+                        <viewControllerLayoutGuide type="bottom" id="0P4-M7-rRe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8pS-oQ-WLg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69W-Kx-lAN">
+                                <rect key="frame" x="21" y="40" width="558" height="40"/>
+                                <color key="backgroundColor" red="0.2047935553058465" green="0.60000002384185791" blue="0.56308833218479337" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="1W1-Ji-qyf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="系统相册">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="jumpSysPhotoBtn:" destination="Ehl-Ib-k0L" eventType="touchUpInside" id="Crl-6y-a5Y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLB-k6-CkY">
+                                <rect key="frame" x="21" y="95" width="558" height="40"/>
+                                <color key="backgroundColor" red="0.20479355530000001" green="0.60000002379999995" blue="0.56308833219999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="bpq-ba-kHO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="系统相机">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="jumpSysCameraBtn:" destination="Ehl-Ib-k0L" eventType="touchUpInside" id="AU7-xf-WO2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rgg-mT-qF4">
+                                <rect key="frame" x="21" y="150" width="558" height="40"/>
+                                <color key="backgroundColor" red="0.20479355530000001" green="0.60000002379999995" blue="0.56308833219999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="h7J-gB-iKx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="自定义相册">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="jumpCustomPhotoBtn:" destination="Ehl-Ib-k0L" eventType="touchUpInside" id="5pA-6b-kcb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uh1-wK-bah">
+                                <rect key="frame" x="21" y="205" width="558" height="40"/>
+                                <color key="backgroundColor" red="0.20479355530000001" green="0.60000002379999995" blue="0.56308833219999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="dZD-x5-217"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="oAH-aP-EYe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="自定义相机">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="jumpCustomCameraBtn:" destination="Ehl-Ib-k0L" eventType="touchUpInside" id="GF2-Qc-7bG"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Photo_SelImage2.png" translatesAutoresizingMaskIntoConstraints="NO" id="dqs-wc-I0K">
+                                <rect key="frame" x="21" y="260" width="558" height="325"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Rgg-mT-qF4" secondAttribute="trailing" constant="5" id="9Wf-G2-Uh6"/>
+                            <constraint firstItem="uh1-wK-bah" firstAttribute="leading" secondItem="8pS-oQ-WLg" secondAttribute="leadingMargin" constant="5" id="CYv-sl-Xq1"/>
+                            <constraint firstItem="uh1-wK-bah" firstAttribute="top" secondItem="Rgg-mT-qF4" secondAttribute="bottom" constant="15" id="HUV-JK-8nO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dqs-wc-I0K" secondAttribute="trailing" constant="5" id="Ofc-Km-7ue"/>
+                            <constraint firstItem="uh1-wK-bah" firstAttribute="top" secondItem="Rgg-mT-qF4" secondAttribute="bottom" constant="15" id="PjE-TJ-gJa"/>
+                            <constraint firstItem="dqs-wc-I0K" firstAttribute="leading" secondItem="8pS-oQ-WLg" secondAttribute="leadingMargin" constant="5" id="SLC-93-owE"/>
+                            <constraint firstItem="uLB-k6-CkY" firstAttribute="top" secondItem="69W-Kx-lAN" secondAttribute="bottom" constant="15" id="Si9-Ma-heq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uh1-wK-bah" secondAttribute="trailing" constant="5" id="TKD-kv-EaV"/>
+                            <constraint firstItem="Rgg-mT-qF4" firstAttribute="top" secondItem="uLB-k6-CkY" secondAttribute="bottom" constant="15" id="W06-6V-dhY"/>
+                            <constraint firstItem="uLB-k6-CkY" firstAttribute="leading" secondItem="8pS-oQ-WLg" secondAttribute="leadingMargin" constant="5" id="WHl-km-MpQ"/>
+                            <constraint firstItem="Rgg-mT-qF4" firstAttribute="leading" secondItem="8pS-oQ-WLg" secondAttribute="leadingMargin" constant="5" id="X69-fZ-rsN"/>
+                            <constraint firstItem="69W-Kx-lAN" firstAttribute="top" secondItem="rXb-57-4L7" secondAttribute="bottom" constant="20" id="bVa-5R-Bgb"/>
+                            <constraint firstItem="dqs-wc-I0K" firstAttribute="top" secondItem="uh1-wK-bah" secondAttribute="bottom" constant="15" id="foV-Qd-mQl"/>
+                            <constraint firstItem="0P4-M7-rRe" firstAttribute="top" secondItem="dqs-wc-I0K" secondAttribute="bottom" constant="15" id="rSq-Rl-sdy"/>
+                            <constraint firstItem="69W-Kx-lAN" firstAttribute="leading" secondItem="8pS-oQ-WLg" secondAttribute="leadingMargin" constant="5" id="w5L-rH-IV0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="69W-Kx-lAN" secondAttribute="trailing" constant="5" id="xBW-0O-xfn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uLB-k6-CkY" secondAttribute="trailing" constant="5" id="yAW-a4-DK9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="photoImageView" destination="dqs-wc-I0K" id="vrb-od-3jq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xly-TA-FTU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2429" y="-648"/>
+        </scene>
+        <!--导航-->
         <scene sceneID="chS-fj-DTj">
             <objects>
-                <navigationController id="fAS-sW-1ct" sceneMemberID="viewController">
+                <navigationController title="导航" id="fAS-sW-1ct" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aaa-ko-QP0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -104,4 +208,7 @@
             <point key="canvasLocation" x="904" y="286"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Photo_SelImage2.png" width="540" height="360"/>
+    </resources>
 </document>
