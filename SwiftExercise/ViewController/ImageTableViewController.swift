@@ -34,16 +34,16 @@ class ImageTableViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell:UITableViewCell! = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier") as? UITableViewCell
+        var cell:UITableViewCell? = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier")
         
         if cell == nil {
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "reuseIdentifier")
         }
         
-        cell.backgroundView = UIImageView(image: UIImage(named:"Photo_SelImage" + String(indexPath.row + 1)))
-        cell.selectionStyle = UITableViewCellSelectionStyle.None
+        cell!.backgroundView = UIImageView(image: UIImage(named:"Photo_SelImage" + String(indexPath.row + 1)))
+        cell!.selectionStyle = UITableViewCellSelectionStyle.None
         
-        return cell
+        return cell!
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -51,7 +51,7 @@ class ImageTableViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        var heigth:CGFloat = CGRectGetWidth(self.view.frame)/1080*495
+        let heigth:CGFloat = CGRectGetWidth(self.view.frame)/1080*495
         return heigth
     }
 

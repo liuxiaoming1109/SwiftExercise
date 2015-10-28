@@ -42,25 +42,25 @@ class HomeTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell:UITableViewCell! = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier") as? UITableViewCell
+        var cell:UITableViewCell? = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier")
         
         if cell == nil {
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "reuseIdentifier")
         }
         
-        cell.textLabel?.text = self.list.objectAtIndex(indexPath.row) as? String
+        cell!.textLabel?.text = self.list.objectAtIndex(indexPath.row) as? String
 
-        return cell
+        return cell!
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         switch indexPath.row {
         case 0:
-            var imageViewControllerJump: ImageTableViewController
+            let imageViewControllerJump: ImageTableViewController
             = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ImageTableViewControllerID") as! ImageTableViewController
             self.navigationController?.pushViewController(imageViewControllerJump, animated: true)
         case 1:
-            var camSysViewControllerJump:CameraSysViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("CameraSysViewControllerID") as! CameraSysViewController
+            let camSysViewControllerJump:CameraSysViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("CameraSysViewControllerID") as! CameraSysViewController
             self.navigationController?.pushViewController(camSysViewControllerJump, animated: true)
         default:
             break

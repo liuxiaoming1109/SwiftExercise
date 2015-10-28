@@ -22,7 +22,7 @@ class CameraSysViewController: UIViewController, UIImagePickerControllerDelegate
     
     // 系统相册
     @IBAction func jumpSysPhotoBtn(sender: AnyObject) {
-        var picker = UIImagePickerController()
+        let picker = UIImagePickerController()
         picker.delegate = self
         picker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
         
@@ -36,7 +36,7 @@ class CameraSysViewController: UIViewController, UIImagePickerControllerDelegate
         if !UIImagePickerController.isSourceTypeAvailable(sourceType) {
             sourceType = UIImagePickerControllerSourceType.PhotoLibrary
         }
-        var picker = UIImagePickerController()
+        let picker = UIImagePickerController()
         picker.delegate = self
         picker.editing = true
         picker.sourceType = sourceType
@@ -59,9 +59,9 @@ class CameraSysViewController: UIViewController, UIImagePickerControllerDelegate
     }
     
     // 选择照片后调用
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
-        print(info)
-        var image = info[UIImagePickerControllerOriginalImage] as? UIImage
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        print(info, terminator: "")
+        let image = info[UIImagePickerControllerOriginalImage] as? UIImage
         photoImageView.image = image
         picker.dismissViewControllerAnimated(true, completion: nil)
     }
