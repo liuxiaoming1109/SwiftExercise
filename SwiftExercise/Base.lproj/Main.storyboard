@@ -55,6 +55,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="主页" id="9D5-lQ-7ag"/>
+                    <connections>
+                        <segue destination="GKb-0M-cpg" kind="push" id="Uhc-tt-oXo"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X25-mI-LcQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -203,6 +206,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xly-TA-FTU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2429" y="-648"/>
+        </scene>
+        <!--基础工具包-->
+        <scene sceneID="mtp-R5-ly6">
+            <objects>
+                <viewController storyboardIdentifier="SSToolkitViewController" title="基础工具包" id="GKb-0M-cpg" customClass="SSToolkitViewController" customModule="SwiftExercise" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="U55-sV-FSj"/>
+                        <viewControllerLayoutGuide type="bottom" id="6zP-Yk-BGS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VQ0-9l-zFN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="W7N-Pb-ZZO">
+                                <rect key="frame" x="20" y="0.0" width="560" height="600"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6zP-Yk-BGS" firstAttribute="top" secondItem="W7N-Pb-ZZO" secondAttribute="bottom" id="OO6-43-62x"/>
+                            <constraint firstItem="W7N-Pb-ZZO" firstAttribute="leading" secondItem="VQ0-9l-zFN" secondAttribute="leadingMargin" id="b9I-za-LJs"/>
+                            <constraint firstItem="W7N-Pb-ZZO" firstAttribute="top" secondItem="U55-sV-FSj" secondAttribute="bottom" constant="-64" id="qLV-Vh-QBw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="W7N-Pb-ZZO" secondAttribute="trailing" id="qfd-Ws-hfm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="v6Q-yf-DaA"/>
+                    <connections>
+                        <outlet property="tableView" destination="W7N-Pb-ZZO" id="hVe-aa-7AX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oul-mM-bOB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2425" y="41"/>
         </scene>
         <!--导航-->
         <scene sceneID="chS-fj-DTj">
