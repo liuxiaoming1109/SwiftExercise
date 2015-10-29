@@ -7,5 +7,6 @@
 
 #import "SAMHUDView.h"
 #import "SAMLoadingView.h"
+#import "SAMCircleProgressView.h"
 
 #endif

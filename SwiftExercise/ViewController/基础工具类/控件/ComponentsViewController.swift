@@ -12,6 +12,15 @@ class ComponentsViewController: UIViewController {
     
     var hudView:SAMHUDView!
     
+    // 固定比例
+    @IBOutlet weak var circleProgressView: SAMCircleProgressView!
+    // 不停变化比例
+    @IBOutlet weak var circleChangProgressView: SAMCircleProgressView!
+    // 让圆比例不停变化时间
+    var circleChangTimer:NSTimer!
+
+    @IBOutlet weak var rateLimitLabel: UILabel!
+    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
@@ -30,6 +39,19 @@ class ComponentsViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
+        // 设置圆的比例
+        circleProgressView.progress = 0.35
+        circleProgressView.borderWidth = 3.0
+        
+        circleChangProgressView.progress = 0
+        circleChangProgressView.fillColor = UIColor.redColor()
+        circleChangProgressView.innerBorderColor = UIColor.greenColor()
+        circleChangTimer = NSTimer.scheduledTimerWithTimeInterval(0.05, target: self, selector: "incrementProgress:", userInfo: nil, repeats: true)
+        
+        // RateLimit
+        RateLimit.execute(name: "RefreshTimeline", limit: 60) { () -> () in
+            rateLimitLabel.text = NSDate().description
+        }
     }
     
     // loading成功
@@ -57,6 +79,13 @@ class ComponentsViewController: UIViewController {
     // loading失败
     func dismissLoadingFailed(timer:NSTimer) {
         hudView.failAndDismissWithTitle("Failed")
+    }
+    
+    func incrementProgress(timer:NSTimer) {
+        circleChangProgressView.progress = circleChangProgressView.progress + 0.01
+        if circleChangProgressView.progress == 1.0 {
+            circleChangProgressView.progress = 0.0
+        }
     }
     
     override func didReceiveMemoryWarning() {

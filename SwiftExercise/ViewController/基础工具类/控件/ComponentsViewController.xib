@@ -3,10 +3,16 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ComponentsViewController" customModule="SwiftExercise" customModuleProvider="target">
             <connections>
+                <outlet property="circleChangProgressView" destination="Yn0-Bb-aIr" id="YRx-Js-RhA"/>
+                <outlet property="circleProgressView" destination="a3u-LF-rgc" id="xcO-G7-uCq"/>
+                <outlet property="rateLimitLabel" destination="LhD-rv-wGV" id="OHQ-gX-1xH"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,21 +21,8 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AWx-AF-SNp">
-                    <rect key="frame" x="10" y="80" width="116" height="30"/>
-                    <animations/>
-                    <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="30" id="Mv9-zb-Mxb"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                    <state key="normal" title="Loading Success"/>
-                    <connections>
-                        <action selector="loadingBtn:" destination="-1" eventType="touchUpInside" id="KU1-T7-0lM"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x7Y-5j-1V3">
-                    <rect key="frame" x="156" y="80" width="116" height="30"/>
+                    <rect key="frame" x="290" y="80" width="210" height="30"/>
                     <animations/>
                     <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal" title="Loading Failed"/>
@@ -38,27 +31,88 @@
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="62r-IH-p07" customClass="SAMLoadingView">
-                    <rect key="frame" x="10" y="125" width="200" height="200"/>
+                    <rect key="frame" x="45" y="125" width="210" height="210"/>
                     <animations/>
                     <color key="backgroundColor" red="0.20479355530000001" green="0.60000002379999995" blue="0.56308833219999999" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="200" id="Kdd-Rz-AMo"/>
-                        <constraint firstAttribute="width" constant="200" id="Mb7-XQ-JP6"/>
+                        <constraint firstAttribute="width" secondItem="62r-IH-p07" secondAttribute="height" multiplier="1:1" id="rYv-lG-09U"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a3u-LF-rgc" customClass="SAMCircleProgressView">
+                    <rect key="frame" x="290" y="125" width="210" height="210"/>
+                    <animations/>
+                    <color key="backgroundColor" red="0.20479355530000001" green="0.60000002379999995" blue="0.56308833219999999" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AWx-AF-SNp">
+                    <rect key="frame" x="45" y="80" width="210" height="30"/>
+                    <animations/>
+                    <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                    <state key="normal" title="Loading Success"/>
+                    <connections>
+                        <action selector="loadingBtn:" destination="-1" eventType="touchUpInside" id="KU1-T7-0lM"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LhD-rv-wGV">
+                    <rect key="frame" x="295" y="355" width="295" height="39"/>
+                    <animations/>
+                    <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="39" id="Okv-rZ-cC9"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yn0-Bb-aIr" customClass="SAMCircleProgressView">
+                    <rect key="frame" x="45" y="355" width="210" height="210"/>
+                    <animations/>
+                    <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Yn0-Bb-aIr" secondAttribute="height" multiplier="1:1" id="J19-Ul-tpy"/>
                     </constraints>
                 </view>
             </subviews>
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="x7Y-5j-1V3" firstAttribute="top" secondItem="AWx-AF-SNp" secondAttribute="top" id="9aj-xF-XLq"/>
-                <constraint firstItem="x7Y-5j-1V3" firstAttribute="leading" secondItem="AWx-AF-SNp" secondAttribute="trailing" constant="30" id="GIg-pi-7Zw"/>
-                <constraint firstItem="62r-IH-p07" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="T3D-vP-1mj"/>
-                <constraint firstItem="AWx-AF-SNp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="bdA-aT-JEh"/>
-                <constraint firstItem="62r-IH-p07" firstAttribute="top" secondItem="x7Y-5j-1V3" secondAttribute="bottom" constant="15" id="dlb-tW-bmR"/>
-                <constraint firstItem="AWx-AF-SNp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="iED-DJ-v32"/>
-                <constraint firstItem="x7Y-5j-1V3" firstAttribute="width" secondItem="AWx-AF-SNp" secondAttribute="width" id="kyn-Dg-xE8"/>
-                <constraint firstItem="x7Y-5j-1V3" firstAttribute="height" secondItem="AWx-AF-SNp" secondAttribute="height" id="sYY-1N-zAC"/>
+                <constraint firstAttribute="leading" secondItem="AWx-AF-SNp" secondAttribute="centerX" constant="-150" id="4i1-SC-7NB"/>
+                <constraint firstItem="62r-IH-p07" firstAttribute="width" secondItem="AWx-AF-SNp" secondAttribute="width" id="9ox-lL-SSe"/>
+                <constraint firstItem="Yn0-Bb-aIr" firstAttribute="width" secondItem="62r-IH-p07" secondAttribute="width" id="Bsf-sK-UYN"/>
+                <constraint firstItem="LhD-rv-wGV" firstAttribute="leading" secondItem="Yn0-Bb-aIr" secondAttribute="trailing" constant="40" id="CV1-vn-mb3"/>
+                <constraint firstItem="Yn0-Bb-aIr" firstAttribute="centerX" secondItem="62r-IH-p07" secondAttribute="centerX" id="Ekd-Pg-x1x"/>
+                <constraint firstItem="Yn0-Bb-aIr" firstAttribute="leading" secondItem="62r-IH-p07" secondAttribute="leading" id="Equ-SP-Pu4"/>
+                <constraint firstAttribute="trailing" secondItem="LhD-rv-wGV" secondAttribute="trailing" constant="10" id="KYX-7j-Yny"/>
+                <constraint firstAttribute="trailing" secondItem="LhD-rv-wGV" secondAttribute="trailing" constant="81" id="KkU-mg-UgF"/>
+                <constraint firstItem="x7Y-5j-1V3" firstAttribute="width" secondItem="AWx-AF-SNp" secondAttribute="width" id="Kse-0I-vxx"/>
+                <constraint firstItem="Yn0-Bb-aIr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="45" id="Ldd-rd-6Y0"/>
+                <constraint firstItem="62r-IH-p07" firstAttribute="bottom" secondItem="a3u-LF-rgc" secondAttribute="bottom" id="Nex-l7-0S8"/>
+                <constraint firstItem="LhD-rv-wGV" firstAttribute="top" secondItem="a3u-LF-rgc" secondAttribute="bottom" constant="20" id="Plx-7J-mhm"/>
+                <constraint firstItem="62r-IH-p07" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="45" id="PnJ-dF-BIi"/>
+                <constraint firstItem="AWx-AF-SNp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="45" id="ULR-hD-hwA"/>
+                <constraint firstItem="LhD-rv-wGV" firstAttribute="bottom" secondItem="a3u-LF-rgc" secondAttribute="bottom" id="UVm-Wc-Q2Z"/>
+                <constraint firstItem="AWx-AF-SNp" firstAttribute="top" secondItem="x7Y-5j-1V3" secondAttribute="top" id="avC-ec-L3w"/>
+                <constraint firstItem="62r-IH-p07" firstAttribute="top" secondItem="AWx-AF-SNp" secondAttribute="bottom" constant="15" id="azw-fK-9ki"/>
+                <constraint firstItem="a3u-LF-rgc" firstAttribute="height" secondItem="62r-IH-p07" secondAttribute="height" id="b5z-Oj-4J0"/>
+                <constraint firstItem="a3u-LF-rgc" firstAttribute="leading" secondItem="62r-IH-p07" secondAttribute="trailing" constant="35" id="eYI-ho-NCa"/>
+                <constraint firstItem="Yn0-Bb-aIr" firstAttribute="leading" secondItem="62r-IH-p07" secondAttribute="leading" id="efM-KE-Ror"/>
+                <constraint firstItem="62r-IH-p07" firstAttribute="top" secondItem="a3u-LF-rgc" secondAttribute="top" id="fzl-pI-0pL"/>
+                <constraint firstItem="Yn0-Bb-aIr" firstAttribute="height" secondItem="62r-IH-p07" secondAttribute="height" id="g3y-22-KPu"/>
+                <constraint firstItem="Yn0-Bb-aIr" firstAttribute="leading" secondItem="62r-IH-p07" secondAttribute="leading" id="ljv-aP-vVI"/>
+                <constraint firstItem="62r-IH-p07" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="0.05" constant="30" id="nhs-d6-QGs"/>
+                <constraint firstItem="Yn0-Bb-aIr" firstAttribute="trailing" secondItem="AWx-AF-SNp" secondAttribute="trailing" id="qjN-JJ-yqp"/>
+                <constraint firstItem="AWx-AF-SNp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="tYP-qm-Xfj"/>
+                <constraint firstItem="Yn0-Bb-aIr" firstAttribute="top" secondItem="62r-IH-p07" secondAttribute="bottom" constant="20" id="tyJ-Pu-Rxx"/>
+                <constraint firstItem="x7Y-5j-1V3" firstAttribute="leading" secondItem="AWx-AF-SNp" secondAttribute="trailing" constant="35" id="vWA-bD-vJq"/>
+                <constraint firstItem="a3u-LF-rgc" firstAttribute="width" secondItem="62r-IH-p07" secondAttribute="width" id="yp2-kf-LLG"/>
+                <constraint firstItem="AWx-AF-SNp" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.35" id="zZK-td-3dN"/>
             </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="KkU-mg-UgF"/>
+                    <exclude reference="UVm-Wc-Q2Z"/>
+                </mask>
+            </variation>
         </view>
     </objects>
 </document>

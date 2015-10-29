@@ -22,6 +22,7 @@
 		116AEA861BE1E9F400B89207 /* SAMHUDWindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 116AEA801BE1E9F400B89207 /* SAMHUDWindowViewController.m */; };
 		116AEA8A1BE1EA3C00B89207 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116AEA891BE1EA3C00B89207 /* GradientView.swift */; };
 		116AEA8E1BE1EFE900B89207 /* SAMLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 116AEA8D1BE1EFE900B89207 /* SAMLoadingView.m */; };
+		116AEA921BE1F5E100B89207 /* SAMCircleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 116AEA911BE1F5E100B89207 /* SAMCircleProgressView.m */; };
 		11E8EF701B74A77B00E82BC5 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E8EF6E1B74A77B00E82BC5 /* HomeTableViewController.swift */; };
 		11E8EF911B74B4CA00E82BC5 /* Photo_SelImage1.png in Resources */ = {isa = PBXBuildFile; fileRef = 11E8EF901B74B4CA00E82BC5 /* Photo_SelImage1.png */; };
 		11E8EF971B74B82E00E82BC5 /* Photo_SelImage5.png in Resources */ = {isa = PBXBuildFile; fileRef = 11E8EF921B74B82E00E82BC5 /* Photo_SelImage5.png */; };
@@ -29,6 +30,7 @@
 		11E8EF991B74B82E00E82BC5 /* Photo_SelImage2.png in Resources */ = {isa = PBXBuildFile; fileRef = 11E8EF941B74B82E00E82BC5 /* Photo_SelImage2.png */; };
 		11E8EF9A1B74B82E00E82BC5 /* Photo_SelImage3.png in Resources */ = {isa = PBXBuildFile; fileRef = 11E8EF951B74B82E00E82BC5 /* Photo_SelImage3.png */; };
 		11E8EF9B1B74B82E00E82BC5 /* Photo_SelImage4.png in Resources */ = {isa = PBXBuildFile; fileRef = 11E8EF961B74B82E00E82BC5 /* Photo_SelImage4.png */; };
+		11EE6F7E1BE20EC000186994 /* RateLimit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EE6F7C1BE20EC000186994 /* RateLimit.swift */; };
 		11F30E2C1B730AD5007A1DDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F30E2B1B730AD5007A1DDC /* AppDelegate.swift */; };
 		11F30E2E1B730AD5007A1DDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F30E2D1B730AD5007A1DDC /* ViewController.swift */; };
 		11F30E311B730AD5007A1DDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F30E2F1B730AD5007A1DDC /* Main.storyboard */; };
@@ -69,6 +71,8 @@
 		116AEA891BE1EA3C00B89207 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		116AEA8C1BE1EFE900B89207 /* SAMLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAMLoadingView.h; sourceTree = "<group>"; };
 		116AEA8D1BE1EFE900B89207 /* SAMLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMLoadingView.m; sourceTree = "<group>"; };
+		116AEA901BE1F5E100B89207 /* SAMCircleProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAMCircleProgressView.h; sourceTree = "<group>"; };
+		116AEA911BE1F5E100B89207 /* SAMCircleProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMCircleProgressView.m; sourceTree = "<group>"; };
 		11E8EF6E1B74A77B00E82BC5 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		11E8EF901B74B4CA00E82BC5 /* Photo_SelImage1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Photo_SelImage1.png; sourceTree = "<group>"; };
 		11E8EF921B74B82E00E82BC5 /* Photo_SelImage5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Photo_SelImage5.png; sourceTree = "<group>"; };
@@ -76,6 +80,7 @@
 		11E8EF941B74B82E00E82BC5 /* Photo_SelImage2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Photo_SelImage2.png; sourceTree = "<group>"; };
 		11E8EF951B74B82E00E82BC5 /* Photo_SelImage3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Photo_SelImage3.png; sourceTree = "<group>"; };
 		11E8EF961B74B82E00E82BC5 /* Photo_SelImage4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Photo_SelImage4.png; sourceTree = "<group>"; };
+		11EE6F7C1BE20EC000186994 /* RateLimit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateLimit.swift; sourceTree = "<group>"; };
 		11F30E261B730AD5007A1DDC /* SwiftExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F30E2A1B730AD5007A1DDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11F30E2B1B730AD5007A1DDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -159,6 +164,8 @@
 		116AEA791BE1E9F400B89207 /* 基础工具类 */ = {
 			isa = PBXGroup;
 			children = (
+				11EE6F7A1BE20EC000186994 /* RateLimit */,
+				116AEA8F1BE1F5E100B89207 /* SAMCircleProgressView */,
 				116AEA8B1BE1EFE900B89207 /* SAMLoadingView */,
 				116AEA881BE1EA3C00B89207 /* View颜色渐变 */,
 				116AEA7A1BE1E9F400B89207 /* SAMHUDView */,
@@ -194,6 +201,15 @@
 				116AEA8D1BE1EFE900B89207 /* SAMLoadingView.m */,
 			);
 			path = SAMLoadingView;
+			sourceTree = "<group>";
+		};
+		116AEA8F1BE1F5E100B89207 /* SAMCircleProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				116AEA901BE1F5E100B89207 /* SAMCircleProgressView.h */,
+				116AEA911BE1F5E100B89207 /* SAMCircleProgressView.m */,
+			);
+			path = SAMCircleProgressView;
 			sourceTree = "<group>";
 		};
 		1197E1611B7369B90050B381 /* Base */ = {
@@ -255,6 +271,14 @@
 				11E8EF6E1B74A77B00E82BC5 /* HomeTableViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		11EE6F7A1BE20EC000186994 /* RateLimit */ = {
+			isa = PBXGroup;
+			children = (
+				11EE6F7C1BE20EC000186994 /* RateLimit.swift */,
+			);
+			path = RateLimit;
 			sourceTree = "<group>";
 		};
 		11F30E1D1B730AD5007A1DDC = {
@@ -435,11 +459,13 @@
 				113077A01BE0D08A009A0744 /* SSToolkitViewController.swift in Sources */,
 				11E8EF701B74A77B00E82BC5 /* HomeTableViewController.swift in Sources */,
 				112B180A1BE1A87900963ECC /* GradientViewController.swift in Sources */,
+				11EE6F7E1BE20EC000186994 /* RateLimit.swift in Sources */,
 				116AEA861BE1E9F400B89207 /* SAMHUDWindowViewController.m in Sources */,
 				11F30E2E1B730AD5007A1DDC /* ViewController.swift in Sources */,
 				11F30E2C1B730AD5007A1DDC /* AppDelegate.swift in Sources */,
 				116AEA8E1BE1EFE900B89207 /* SAMLoadingView.m in Sources */,
 				116AEA841BE1E9F400B89207 /* SAMHUDView.m in Sources */,
+				116AEA921BE1F5E100B89207 /* SAMCircleProgressView.m in Sources */,
 				116AEA851BE1E9F400B89207 /* SAMHUDWindow.m in Sources */,
 				116AEA8A1BE1EA3C00B89207 /* GradientView.swift in Sources */,
 				116AEA761BE1C85200B89207 /* ComponentsViewController.swift in Sources */,
