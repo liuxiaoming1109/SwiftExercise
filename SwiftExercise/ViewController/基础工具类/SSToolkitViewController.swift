@@ -10,7 +10,7 @@ import UIKit
 
 class SSToolkitViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var list:NSArray = ["View颜色渐变",""]
+    var list:NSArray = ["View颜色渐变","部分控件"]
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -49,8 +49,10 @@ class SSToolkitViewController: UIViewController, UITableViewDataSource, UITableV
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         switch indexPath.row {
-            case 0:
+        case 0:
             self.navigationController?.pushViewController(GradientViewController(), animated: true)
+        case 1:
+            self.navigationController?.pushViewController(ComponentsViewController(), animated: true)
         default:
             break
         }

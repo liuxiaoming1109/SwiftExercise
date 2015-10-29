@@ -32,7 +32,6 @@ class GradientViewController: UIViewController {
         self.navigationController?.navigationBar.topItem?.title = "返回"
         
         gradientView.colors = [UIColor.whiteColor(), UIColor(red: 0, green: 0, blue: 0.5, alpha: 1)]
-
         
 //        gradientView.colors = [UIColor.blackColor(), UIColor.redColor()]
         
