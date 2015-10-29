@@ -37,13 +37,24 @@
                         <action selector="loadingFailedBtn:" destination="-1" eventType="touchUpInside" id="owv-W9-TfY"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="62r-IH-p07" customClass="SAMLoadingView">
+                    <rect key="frame" x="10" y="125" width="200" height="200"/>
+                    <animations/>
+                    <color key="backgroundColor" red="0.20479355530000001" green="0.60000002379999995" blue="0.56308833219999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="Kdd-Rz-AMo"/>
+                        <constraint firstAttribute="width" constant="200" id="Mb7-XQ-JP6"/>
+                    </constraints>
+                </view>
             </subviews>
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="x7Y-5j-1V3" firstAttribute="top" secondItem="AWx-AF-SNp" secondAttribute="top" id="9aj-xF-XLq"/>
                 <constraint firstItem="x7Y-5j-1V3" firstAttribute="leading" secondItem="AWx-AF-SNp" secondAttribute="trailing" constant="30" id="GIg-pi-7Zw"/>
+                <constraint firstItem="62r-IH-p07" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="T3D-vP-1mj"/>
                 <constraint firstItem="AWx-AF-SNp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="bdA-aT-JEh"/>
+                <constraint firstItem="62r-IH-p07" firstAttribute="top" secondItem="x7Y-5j-1V3" secondAttribute="bottom" constant="15" id="dlb-tW-bmR"/>
                 <constraint firstItem="AWx-AF-SNp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="iED-DJ-v32"/>
                 <constraint firstItem="x7Y-5j-1V3" firstAttribute="width" secondItem="AWx-AF-SNp" secondAttribute="width" id="kyn-Dg-xE8"/>
                 <constraint firstItem="x7Y-5j-1V3" firstAttribute="height" secondItem="AWx-AF-SNp" secondAttribute="height" id="sYY-1N-zAC"/>

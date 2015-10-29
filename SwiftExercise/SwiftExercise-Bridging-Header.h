@@ -6,5 +6,6 @@
 #define SwiftExercise_SwiftExercise_Bridging_Header_h
 
 #import "SAMHUDView.h"
+#import "SAMLoadingView.h"
 
 #endif
