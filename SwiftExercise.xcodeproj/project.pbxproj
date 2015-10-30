@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11013E981BE316FF00CACBF5 /* AutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11013E971BE316FF00CACBF5 /* AutoLayoutViewController.swift */; };
+		11013E9A1BE31B8A00CACBF5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11013E991BE31B8A00CACBF5 /* Constants.swift */; };
+		11013EA61BE33AC200CACBF5 /* AutoLayoutExercise1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11013EA41BE33AC200CACBF5 /* AutoLayoutExercise1ViewController.swift */; };
+		11013EA71BE33AC200CACBF5 /* AutoLayoutExercise1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11013EA51BE33AC200CACBF5 /* AutoLayoutExercise1ViewController.xib */; };
+		11013EAA1BE352D700CACBF5 /* AutoLayoutTableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11013EA81BE352D700CACBF5 /* AutoLayoutTableTableViewCell.swift */; };
+		11013EAB1BE352D700CACBF5 /* AutoLayoutTableTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11013EA91BE352D700CACBF5 /* AutoLayoutTableTableViewCell.xib */; };
+		11013EAE1BE3535300CACBF5 /* AutoLayoutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11013EAC1BE3535300CACBF5 /* AutoLayoutTableViewController.swift */; };
+		11013EAF1BE3535300CACBF5 /* AutoLayoutTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11013EAD1BE3535300CACBF5 /* AutoLayoutTableViewController.xib */; };
 		112B180A1BE1A87900963ECC /* GradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112B18081BE1A87900963ECC /* GradientViewController.swift */; };
 		112B180B1BE1A87900963ECC /* GradientViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 112B18091BE1A87900963ECC /* GradientViewController.xib */; };
 		112B18281BE1BC9B00963ECC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 112B18271BE1BC9B00963ECC /* UIKit.framework */; };
@@ -50,6 +58,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11013E971BE316FF00CACBF5 /* AutoLayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoLayoutViewController.swift; sourceTree = "<group>"; };
+		11013E991BE31B8A00CACBF5 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		11013EA41BE33AC200CACBF5 /* AutoLayoutExercise1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoLayoutExercise1ViewController.swift; sourceTree = "<group>"; };
+		11013EA51BE33AC200CACBF5 /* AutoLayoutExercise1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoLayoutExercise1ViewController.xib; sourceTree = "<group>"; };
+		11013EA81BE352D700CACBF5 /* AutoLayoutTableTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoLayoutTableTableViewCell.swift; sourceTree = "<group>"; };
+		11013EA91BE352D700CACBF5 /* AutoLayoutTableTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoLayoutTableTableViewCell.xib; sourceTree = "<group>"; };
+		11013EAC1BE3535300CACBF5 /* AutoLayoutTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoLayoutTableViewController.swift; sourceTree = "<group>"; };
+		11013EAD1BE3535300CACBF5 /* AutoLayoutTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoLayoutTableViewController.xib; sourceTree = "<group>"; };
 		112B18081BE1A87900963ECC /* GradientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientViewController.swift; sourceTree = "<group>"; };
 		112B18091BE1A87900963ECC /* GradientViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GradientViewController.xib; sourceTree = "<group>"; };
 		112B18201BE1BA7D00963ECC /* SwiftExercise-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SwiftExercise-Prefix.pch"; sourceTree = "<group>"; };
@@ -114,6 +130,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11013E961BE313A200CACBF5 /* 自动布局练习 */ = {
+			isa = PBXGroup;
+			children = (
+				11013EA31BE33AC200CACBF5 /* 练习Controller */,
+				11013E971BE316FF00CACBF5 /* AutoLayoutViewController.swift */,
+			);
+			path = "自动布局练习";
+			sourceTree = "<group>";
+		};
+		11013EA31BE33AC200CACBF5 /* 练习Controller */ = {
+			isa = PBXGroup;
+			children = (
+				11013EA41BE33AC200CACBF5 /* AutoLayoutExercise1ViewController.swift */,
+				11013EA51BE33AC200CACBF5 /* AutoLayoutExercise1ViewController.xib */,
+				11013EA81BE352D700CACBF5 /* AutoLayoutTableTableViewCell.swift */,
+				11013EA91BE352D700CACBF5 /* AutoLayoutTableTableViewCell.xib */,
+				11013EAC1BE3535300CACBF5 /* AutoLayoutTableViewController.swift */,
+				11013EAD1BE3535300CACBF5 /* AutoLayoutTableViewController.xib */,
+			);
+			path = "练习Controller";
+			sourceTree = "<group>";
+		};
 		113077951BE0C934009A0744 /* 相机-相册 */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +260,7 @@
 		1197E1621B7369B90050B381 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				11013E991BE31B8A00CACBF5 /* Constants.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -266,6 +305,7 @@
 		11E8EF6D1B74A77B00E82BC5 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				11013E961BE313A200CACBF5 /* 自动布局练习 */,
 				1130779A1BE0CE83009A0744 /* 基础工具类 */,
 				113077951BE0C934009A0744 /* 相机-相册 */,
 				11E8EF6E1B74A77B00E82BC5 /* HomeTableViewController.swift */,
@@ -428,11 +468,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				112B180B1BE1A87900963ECC /* GradientViewController.xib in Resources */,
+				11013EAB1BE352D700CACBF5 /* AutoLayoutTableTableViewCell.xib in Resources */,
 				11F30E311B730AD5007A1DDC /* Main.storyboard in Resources */,
 				11E8EF9A1B74B82E00E82BC5 /* Photo_SelImage3.png in Resources */,
 				11F30E361B730AD5007A1DDC /* LaunchScreen.xib in Resources */,
 				11E8EF981B74B82E00E82BC5 /* Photo_SelImage6.png in Resources */,
+				11013EA71BE33AC200CACBF5 /* AutoLayoutExercise1ViewController.xib in Resources */,
 				11F30E331B730AD5007A1DDC /* Images.xcassets in Resources */,
+				11013EAF1BE3535300CACBF5 /* AutoLayoutTableViewController.xib in Resources */,
 				11E8EF9B1B74B82E00E82BC5 /* Photo_SelImage4.png in Resources */,
 				11E8EF991B74B82E00E82BC5 /* Photo_SelImage2.png in Resources */,
 				11E8EF911B74B4CA00E82BC5 /* Photo_SelImage1.png in Resources */,
@@ -456,11 +499,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				113077991BE0C953009A0744 /* ImageTableViewController.swift in Sources */,
+				11013EA61BE33AC200CACBF5 /* AutoLayoutExercise1ViewController.swift in Sources */,
+				11013E9A1BE31B8A00CACBF5 /* Constants.swift in Sources */,
 				113077A01BE0D08A009A0744 /* SSToolkitViewController.swift in Sources */,
 				11E8EF701B74A77B00E82BC5 /* HomeTableViewController.swift in Sources */,
 				112B180A1BE1A87900963ECC /* GradientViewController.swift in Sources */,
 				11EE6F7E1BE20EC000186994 /* RateLimit.swift in Sources */,
 				116AEA861BE1E9F400B89207 /* SAMHUDWindowViewController.m in Sources */,
+				11013EAE1BE3535300CACBF5 /* AutoLayoutTableViewController.swift in Sources */,
 				11F30E2E1B730AD5007A1DDC /* ViewController.swift in Sources */,
 				11F30E2C1B730AD5007A1DDC /* AppDelegate.swift in Sources */,
 				116AEA8E1BE1EFE900B89207 /* SAMLoadingView.m in Sources */,
@@ -468,8 +514,10 @@
 				116AEA921BE1F5E100B89207 /* SAMCircleProgressView.m in Sources */,
 				116AEA851BE1E9F400B89207 /* SAMHUDWindow.m in Sources */,
 				116AEA8A1BE1EA3C00B89207 /* GradientView.swift in Sources */,
+				11013EAA1BE352D700CACBF5 /* AutoLayoutTableTableViewCell.swift in Sources */,
 				116AEA761BE1C85200B89207 /* ComponentsViewController.swift in Sources */,
 				113077981BE0C953009A0744 /* CameraSysViewController.swift in Sources */,
+				11013E981BE316FF00CACBF5 /* AutoLayoutViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

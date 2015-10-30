@@ -57,11 +57,12 @@
                     <navigationItem key="navigationItem" title="主页" id="9D5-lQ-7ag"/>
                     <connections>
                         <segue destination="GKb-0M-cpg" kind="push" id="Uhc-tt-oXo"/>
+                        <segue destination="V55-hn-1hE" kind="push" id="Yen-Go-DtN"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X25-mI-LcQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1723" y="286"/>
+            <point key="canvasLocation" x="1603" y="294"/>
         </scene>
         <!--图片显示-->
         <scene sceneID="qh0-la-hLM">
@@ -97,7 +98,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U9h-2G-8x2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2429" y="-1353"/>
+            <point key="canvasLocation" x="2405" y="-3190"/>
         </scene>
         <!--系统相机-->
         <scene sceneID="2do-gL-KD6">
@@ -205,7 +206,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xly-TA-FTU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2429" y="-648"/>
+            <point key="canvasLocation" x="2405" y="-2488"/>
         </scene>
         <!--基础工具包-->
         <scene sceneID="mtp-R5-ly6">
@@ -241,7 +242,43 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oul-mM-bOB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2425" y="41"/>
+            <point key="canvasLocation" x="2397" y="-1831"/>
+        </scene>
+        <!--自动布局-->
+        <scene sceneID="hSF-uU-Zkx">
+            <objects>
+                <viewController storyboardIdentifier="AutoLayoutViewController" title="自动布局" id="V55-hn-1hE" customClass="AutoLayoutViewController" customModule="SwiftExercise" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="C8y-Yv-Qnm"/>
+                        <viewControllerLayoutGuide type="bottom" id="oq0-s1-9IN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jXf-DD-ggc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QVX-17-HOL">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QVX-17-HOL" firstAttribute="bottom" secondItem="oq0-s1-9IN" secondAttribute="top" id="DiF-lo-S9Z"/>
+                            <constraint firstItem="QVX-17-HOL" firstAttribute="leading" secondItem="jXf-DD-ggc" secondAttribute="leadingMargin" constant="-20" id="LRs-72-0KX"/>
+                            <constraint firstItem="QVX-17-HOL" firstAttribute="trailing" secondItem="jXf-DD-ggc" secondAttribute="trailingMargin" constant="20" id="NtC-jy-a7X"/>
+                            <constraint firstItem="QVX-17-HOL" firstAttribute="top" secondItem="C8y-Yv-Qnm" secondAttribute="bottom" constant="-64" id="jRO-qE-I3B"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jlK-6a-AWS"/>
+                    <connections>
+                        <outlet property="tableView" destination="QVX-17-HOL" id="dck-5Z-hpc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wcy-P7-xkL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2401" y="-1139"/>
         </scene>
         <!--导航-->
         <scene sceneID="chS-fj-DTj">
@@ -251,6 +288,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
+                        <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.20479355530000001" green="0.60000002379999995" blue="0.56308833219999999" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="73k-18-t1k" kind="relationship" relationship="rootViewController" id="Bau-Q9-mbg"/>

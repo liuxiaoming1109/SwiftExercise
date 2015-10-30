@@ -10,7 +10,7 @@ import UIKit
 
 class HomeTableViewController: UITableViewController {
     
-    var list:NSArray = {["TableView显示图片", "相机－相册","基础工具类"]}()
+    var list:NSArray = {["TableView显示图片", "相机－相册","基础工具类","自动布局练习"]}()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +20,7 @@ class HomeTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,6 +49,8 @@ class HomeTableViewController: UITableViewController {
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "reuseIdentifier")
         }
         
+        cell?.backgroundColor = Constants.kAPPViewColor
+        
         cell!.textLabel?.text = self.list.objectAtIndex(indexPath.row) as? String
 
         return cell!
@@ -64,9 +67,14 @@ class HomeTableViewController: UITableViewController {
         case 1:
             let camSysViewControllerJump:CameraSysViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("CameraSysViewControllerID") as! CameraSysViewController
             self.navigationController?.pushViewController(camSysViewControllerJump, animated: true)
+        // 基础工具类
         case 2:
             let toolkitViewControllerump:SSToolkitViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("SSToolkitViewController") as! SSToolkitViewController
             self.navigationController?.pushViewController(toolkitViewControllerump, animated: true)
+        // 自动布局
+        case 3:
+            let autoLayoutViewController:AutoLayoutViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("AutoLayoutViewController") as! AutoLayoutViewController
+            self.navigationController?.pushViewController(autoLayoutViewController, animated: true)
         default:
             break
         }
