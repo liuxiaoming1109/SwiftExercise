@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QRCodeViewController" customModule="SwiftExercise" customModuleProvider="target">
+            <connections>
+                <outlet property="scanReturnLabel" destination="eLB-vF-4MS" id="Igh-mi-2hE"/>
+                <outlet property="scanView" destination="mjs-Ey-WOW" id="KHg-Qx-jRx"/>
+                <outlet property="startButton" destination="zTd-s8-Ds7" id="0OD-yf-GXF"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTd-s8-Ds7">
+                    <rect key="frame" x="250" y="530" width="100" height="30"/>
+                    <animations/>
+                    <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="MUe-kj-heZ"/>
+                        <constraint firstAttribute="width" constant="100" id="goE-0K-gBU"/>
+                    </constraints>
+                    <state key="normal" title="开始"/>
+                    <connections>
+                        <action selector="startStopScanBtn:" destination="-1" eventType="touchUpInside" id="YVo-X8-SaN"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mjs-Ey-WOW">
+                    <rect key="frame" x="0.0" y="60" width="600" height="440"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请扫描二维码" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLB-vF-4MS">
+                            <rect key="frame" x="20" y="80" width="560" height="50"/>
+                            <animations/>
+                            <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="dvX-ce-8E5"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <animations/>
+                    <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="eLB-vF-4MS" firstAttribute="top" secondItem="mjs-Ey-WOW" secondAttribute="top" constant="80" id="Di3-Dt-WCj"/>
+                        <constraint firstAttribute="trailing" secondItem="eLB-vF-4MS" secondAttribute="trailing" constant="20" id="W2z-lH-gqZ"/>
+                        <constraint firstItem="eLB-vF-4MS" firstAttribute="leading" secondItem="mjs-Ey-WOW" secondAttribute="leading" constant="20" id="hC1-0K-9Vh"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="mjs-Ey-WOW" secondAttribute="trailing" id="6XI-EL-vNu"/>
+                <constraint firstItem="zTd-s8-Ds7" firstAttribute="top" secondItem="mjs-Ey-WOW" secondAttribute="bottom" constant="30" id="Ht2-Ne-xKe"/>
+                <constraint firstAttribute="bottom" secondItem="mjs-Ey-WOW" secondAttribute="bottom" constant="100" id="IGn-Qg-nm5"/>
+                <constraint firstItem="mjs-Ey-WOW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="NtB-lF-u2v"/>
+                <constraint firstItem="zTd-s8-Ds7" firstAttribute="centerX" secondItem="mjs-Ey-WOW" secondAttribute="centerX" id="PSk-Mx-EhT"/>
+                <constraint firstItem="mjs-Ey-WOW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="60" id="pjI-c7-ubQ"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

@@ -10,7 +10,7 @@ import UIKit
 
 class HomeTableViewController: UITableViewController {
     
-    var list:NSArray = {["TableView显示图片", "相机－相册","基础工具类","自动布局练习"]}()
+    var list:NSArray = {["TableView显示图片", "相机－相册","基础工具类","自动布局","二维码"]}()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,6 +75,9 @@ class HomeTableViewController: UITableViewController {
         case 3:
             let autoLayoutViewController:AutoLayoutViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("AutoLayoutViewController") as! AutoLayoutViewController
             self.navigationController?.pushViewController(autoLayoutViewController, animated: true)
+        // 二维码
+        case 4:
+            self.navigationController?.pushViewController(QRCodeViewController(), animated: true)
         default:
             break
         }

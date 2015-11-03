@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -15,15 +16,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="600" height="62.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Photo_SelImage2.png" translatesAutoresizingMaskIntoConstraints="NO" id="Te4-9A-qIG">
-                        <rect key="frame" x="18" y="8" width="66" height="47"/>
-                        <animations/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="66" id="F1n-RD-7eT"/>
-                        </constraints>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sg3-LU-Rqs">
-                        <rect key="frame" x="398" y="13" width="177" height="37"/>
+                        <rect key="frame" x="398" y="13" width="177" height="20.5"/>
                         <animations/>
                         <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -33,15 +27,21 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Photo_SelImage2.png" translatesAutoresizingMaskIntoConstraints="NO" id="Te4-9A-qIG">
+                        <rect key="frame" x="23" y="0.0" width="94" height="62.5"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Te4-9A-qIG" secondAttribute="height" multiplier="3:2" id="utv-L7-lrN"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <animations/>
                 <constraints>
-                    <constraint firstItem="Te4-9A-qIG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="CfV-aH-ARd"/>
-                    <constraint firstItem="Te4-9A-qIG" firstAttribute="centerY" secondItem="sg3-LU-Rqs" secondAttribute="centerY" id="Imn-sX-0ty"/>
-                    <constraint firstItem="Te4-9A-qIG" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Ybk-eM-kdo"/>
+                    <constraint firstAttribute="topMargin" secondItem="Te4-9A-qIG" secondAttribute="top" constant="8" id="Nox-gf-80R"/>
                     <constraint firstAttribute="trailingMargin" secondItem="sg3-LU-Rqs" secondAttribute="trailing" constant="17" id="ZYk-CI-Clo"/>
+                    <constraint firstItem="Te4-9A-qIG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="15" id="Zto-Pw-4cZ"/>
                     <constraint firstItem="sg3-LU-Rqs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="bXo-PE-hDe"/>
-                    <constraint firstItem="Te4-9A-qIG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="od1-G5-3oi"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Te4-9A-qIG" secondAttribute="bottom" constant="-8" id="qC9-66-kid"/>
                 </constraints>
             </tableViewCellContentView>
             <animations/>
